@@ -17,3 +17,5 @@ repo: uppymiss/the-fluctuating-affect-cognition-repo
 - The description for this repo is `A Prospective Study on Cognitive and Emotional Fluctuations Over the Course of a Month`.
 
 [![DOI](https://zenodo.org/badge/1112672842.svg)](https://doi.org/10.5281/zenodo.17871654)
+
+https://doi.org/10.5281/zenodo.17871655
