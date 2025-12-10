@@ -8,8 +8,6 @@ https://doi.org/10.5281/zenodo.17871655
 **OSF Project DOI:**
 [![OSF icon](https://raw.githubusercontent.com/uppymiss/the-fluctuating-affect-cognition-repo/main/media/osf_icon_105x40.svg)](https://doi.org/10.17605/OSF.IO/XRF7U)
 
-**OSF Project DOI:** 10.17605/OSF.IO/XRF7U
-
 *OSF logo © Center for Open Science. License: CC BY 4.0.*
 
 --------
@@ -49,6 +47,6 @@ Open science companion repo for:
 
 ## Links
 - GitHub: https://github.com/uppymiss/the-fluctuating-affect-cognition-repo
-- OSF project/preregistration: <[OSF link](https://osf.io/xrf7u/overview?view_only=5d7fd8e5e61a4b91961c5f2c60e20def)>
+- OSF project/preregistration: [OSF link](https://osf.io/xrf7u/overview)
 - CONTRIBUTING: ./CONTRIBUTING.md
 - Security/Privacy: ./SECURITY.md
