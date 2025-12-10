@@ -1,11 +1,27 @@
-# Security Policy
+# Security & Privacy Policy
 
-## Supported Versions
-- Current main branch: supported
-- Older revisions: not supported
+## Scope
+- Open science materials (JSON codes for cognitive tasks, docs, later anonymized/aggregated data/analyses).
+- No raw data with personal identifiers belongs here.
 
-## Reporting a Vulnerability
-- Please open a private issue or contact the maintainers via the repository’s security reporting channel.
-- Do not post sensitive details publicly.
-- We’ll acknowledge within a few business days and coordinate a fix/response.
-- This project must contain only anonymized data. If you find identifying or sensitive material, report immediately and remove/replace it with anonymized data.
+## Data Hygiene
+- Forbidden: names, emails, IDs, free text with identifiers, IPs, device data, raw logs.
+- Allowed: anonymized/aggregated data with no re-identification risk.
+- When in doubt: review before upload.
+
+## Incident Handling (PII discovered?)
+1. Remove/overwrite the file immediately (if in commit history: inform maintainers; do not force-push `main`).
+2. Notify maintainers: <Contact>
+3. Brief note in PR/Issue: what was affected, what was removed/replaced.
+
+## Branch/PR Hygiene
+- `main` is protected: PR required, 1 review, no force-push, no deletion.
+- Use feature branches (`feat/...`, `docs/...`, `fix/...`) and fill the PR template.
+
+## External Contributions / Replication
+- Fork + branch in fork recommended; optional PR back.
+- Replication via download/clone without PR is fine; please document versions/changes if contributing back.
+
+## Tools / Checks (current)
+- No mandatory CI status checks yet. CodeQL/tests can be added later.
+- JSON codes: in `json-codes-cognitive-tasks/`; please describe/validate briefly.
