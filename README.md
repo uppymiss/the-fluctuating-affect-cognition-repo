@@ -3,7 +3,6 @@
 **Repository DOI (Zenodo):**
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17871655.svg)](https://doi.org/10.5281/zenodo.17871655)
 
-https://doi.org/10.5281/zenodo.17871655
 
 **OSF Project DOI:**
 [![OSF icon](https://raw.githubusercontent.com/uppymiss/the-fluctuating-affect-cognition-repo/main/media/osf_icon_105x40.svg)](https://doi.org/10.17605/OSF.IO/XRF7U)
