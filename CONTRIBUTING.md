@@ -1,21 +1,33 @@
-# Contribution Guide
+# Contributing
 
-## Scope
-- This repository collects materials and anonymized data for the study on cycle-related fluctuations in cognition and affect.
-- Commit only anonymized content.
+## Branches
+- Work on feature branches (`feat/...`, `fix/...`, `docs/...`), then PR into `main`.
+- `main` is protected (PR required, 1 review, no force-push, no deletion).
 
-## How to contribute
-1) Check existing issues or create a new issue (briefly describe what you plan to change/add).
-2) Make changes on a branch (or directly on `main` if your team agrees).
-3) Use clear, concise commit messages (e.g., `Add task instructions v2`, `Fix anonymization note`).
+## PRs
+- Fill out the PR template (Summary, Testing, Notes).
+- At least 1 review before merge.
+- If “Require linear history” is enabled: prefer rebase & merge (no merge commits).
 
-## Files & data
-- Do not commit personal or identifying information.
-- No raw data with real names or IDs; only anonymized/aggregated data.
-- If unsure, open an issue before uploading data.
+## Data Hygiene
+- Do not commit PII/raw data/IDs/free text with identifiers.
+- Anonymized/aggregated data only, with clear documentation.
+- If a violation occurs: remove/overwrite the file(s) immediately and inform maintainers.
+
+## JSON Codes (SoSci Survey)
+- Location: `json-codes-cognitive-tasks/`
+- Briefly describe what each JSON does; if relevant, include validation/notes.
+
+## External Contributions / Replication
+- Fork + branch in the fork; optional PR back.
+- Replication can also be done via clone/download without PR; please document versions/changes if contributing back.
+
+## Communication
+- Use Issues for proposals/bugs/todos.
+- Keep PR titles/descriptions concise and specific.
 
 ## Structure
-- `json-codes-cognitive-tasks/` – JSON codes for cognitive tasks (SoSci integration)
+- `json-codes-cognitive-tasks/`- JSON codes for cognitive tasks (SoSci integration)
 - `.github/` – PR template
 - `README.md`, `CONTRIBUTING.md`, `SECURITY.md`
 - (Later) `analysis/` for additional scripts
