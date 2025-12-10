@@ -1,0 +1,1377 @@
+{
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Instructions",
+      "content": "<header>\r\n  <h1>Flanker Tast</h1>\r\n</header>\r\n<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n    <p>\r\n    Herzlich willkommen zum <strong>Flanker Task</strong>!\r\n  </p>\r\n  <p>\r\n    <p>In der folgenden Aufgabe zeigen wir Ihnen eine Reihe von Pfeilen, die in unterschiedliche Richtungen zeigen.<br><br>Ihre Aufgabe ist, anzugeben, in welche Richtung der <strong>mittlere Pfeil</strong> zeigt.</p>\r\n    <p>Bitte antworten mit den Pfeiltasten <kbd>&larr;</kbd> oder <kbd>&rarr;</kbd> entsprechend der Richtung des <strong>mittleren Pfeils.</strong><br> Zeigt er nach links, drücken Sie die Taste <kbd>&larr;</kbd>, zeigt er nach rechts, drücken Sie die Taste <kbd>&rarr;</kbd>.<br><br> Die Richtung der anderen Pfeile ist für Ihre Antwort unerheblich.</p>\r\n    <p>Antworten Sie bitte so schnell und so genau wie möglich.</p>\r\n  </div>\r\n</main>\r\n\r\n<footer>\r\n  Bitte drücken Sie die <kbd>Leertaste</kbd>, wenn Sie bereit sind.\r\n</footer>",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "2": {
+      "id": "2",
+      "type": "lab.flow.Loop",
+      "children": [
+        "3"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "orientation",
+            "type": "string"
+          },
+          {
+            "name": "congruency",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "flanker",
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ]
+        ]
+      },
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Probedurchlauf mit Feedback",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "_collapsed": false
+    },
+    "3": {
+      "id": "3",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "4",
+        "6",
+        "7"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "4": {
+      "id": "4",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Empty Screen",
+      "content": "<main>\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "timeout": "150",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "5": {
+      "id": "5",
+      "type": "lab.flow.Loop",
+      "children": [
+        "9"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "orientation",
+            "type": "string"
+          },
+          {
+            "name": "congruency",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "flanker",
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent ",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ]
+        ]
+      },
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Task ohne Feedback 1",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "_collapsed": false
+    },
+    "6": {
+      "id": "6",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "left",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Feedback",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\" id=\"feedback\">\r\n  <span\r\n    style=\"color: ${ state.correct ? 'green' : 'red' }; font-size: 3rem\"\r\n  >\r\n    ⬤\r\n  </span>\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "tardy": true,
+      "timeout": "500",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "8": {
+      "id": "8",
+      "type": "lab.flow.Loop",
+      "children": [
+        "14"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "orientation",
+            "type": "string"
+          },
+          {
+            "name": "congruency",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "flanker",
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent ",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ]
+        ]
+      },
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Task ohne Feedback 2",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "_collapsed": false
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "10",
+        "11",
+        "12"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior",
+      "timeout": "650"
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Empty Screen",
+      "content": "<main>\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "timeout": "150",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "11": {
+      "id": "11",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "left",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "12": {
+      "id": "12",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Feedback",
+      "content": "",
+      "tardy": true,
+      "timeout": "300",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Content"
+    },
+    "13": {
+      "id": "13",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Zwischenmeldung vor Trial 1",
+      "content": "<header>\r\n  <h1>Sehr gut!</h1>\r\n</header>\r\n<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n    <p>\r\n    <strong>Vielen Dank, dass Sie sich die Zeit für die Übungsdurchgänge genommen haben.</strong>\r\n  </p>\r\n  <p>\r\n    <p>Nun sind Sie mit der Aufgabe vertraut, Sie können eine kurze Pause einlegen und das Experiment starten, sobald Sie bereit sind.</p>\r\n    <p>Die Aufgabe ist dieselbe wie zuvor, jedoch ohne Rückmeldungen. Sie haben für jedes Items weniger als eine Sekunde zeit, antworten sie daher so schnell und genau wie möglich.\r\n      \r\n      Sie absolvieren *drei* Durchgänge, zwischen denen Sie eine kurze Pause machen können.</p>\r\n  </div>\r\n</main>\r\n\r\n<footer>\r\n  Durch Drücken der <kbd>Leertaste</kbd> starten Sie das eigentliche Experiment.\r\n</footer>",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "14": {
+      "id": "14",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "16",
+        "17",
+        "18"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior",
+      "timeout": "650"
+    },
+    "15": {
+      "id": "15",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Vielen Dank!",
+      "content": "<header>\r\n  <h2>Vielen Dank!</h2>\r\n</header>\r\n\r\n<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n    <p>Sie haben das Experiment abgeschlossen. <br> Vielen Dank für Ihre Teilnahme! <br><br> Sie können dieses Fenster jetzt schließen.</p>\r\n  </div>\r\n</main>\r\n<footer>\r\n  <p>\r\n    Dieses Experiment wurde auf Grundlage von Vorlagen von,<br> \r\n    <a href=\"http://felixhenninger.com\">\r\n    Felix Henninger</a> entwickelt und für die MindCycle-Studie angepasst.\r\n  </p>\r\n</footer>",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Content"
+    },
+    "16": {
+      "id": "16",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Empty Screen",
+      "content": "<main>\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "timeout": "150",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "17": {
+      "id": "17",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "left",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "18": {
+      "id": "18",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Feedback",
+      "content": "",
+      "tardy": true,
+      "timeout": "300",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Content"
+    },
+    "19": {
+      "id": "19",
+      "type": "lab.flow.Loop",
+      "children": [
+        "20"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "orientation",
+            "type": "string"
+          },
+          {
+            "name": "congruency",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "flanker",
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent ",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ]
+        ]
+      },
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Task ohne Feedback 3",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "sample": {
+        "mode": "draw-shuffle"
+      },
+      "_collapsed": false
+    },
+    "20": {
+      "id": "20",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "21",
+        "22",
+        "23"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior",
+      "timeout": "650"
+    },
+    "21": {
+      "id": "21",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Empty Screen",
+      "content": "<main>\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "timeout": "150",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "22": {
+      "id": "22",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "left",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Trial",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n\r\n</main>\r\n\r\n<footer>\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd>&larr;</kbd> für &larr; und <kbd>&rarr;</kbd> für &rarr;.\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "23": {
+      "id": "23",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "Feedback",
+      "content": "",
+      "tardy": true,
+      "timeout": "300",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Content"
+    },
+    "24": {
+      "id": "24",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Zwischenmeldung vor richtigen Trials",
+      "content": "<header>\r\n  <h1>Sehr gut!</h1>\r\n</header>\r\n<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n    <p>\r\n    <strong>Sie haben den zweiten Durchgang geschafft.</strong>\r\n  </p>\r\n  <p>\r\n    <p>Sie können eine kurze Pause einlegen und den nächsten Durchgang starten, sobald Sie bereit sind.</p>\r\n    <p>Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genaue wie möglich!</p>\r\n  </div>\r\n</main>\r\n\r\n<footer>\r\n  Durch Drücken der <kbd>Leertaste</kbd> starten Sie den letzten Durchgang.\r\n</footer>",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "25": {
+      "id": "25",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Zwischenmeldung vor Trial 2",
+      "content": "<header>\r\n  <h1>Sehr gut!</h1>\r\n</header>\r\n<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n    <p>\r\n    <strong>Sie haben den ersten Durchgang geschafft.</strong>\r\n  </p>\r\n  <p>\r\n    <p>Sie können eine kurze Pause einlegen und den nächsten Durchgang starten, sobald Sie bereit sind.</p>\r\n    <p>Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genaue wie möglich! </p>\r\n  </div>\r\n</main>\r\n\r\n<footer>\r\n  Durch Drücken der <kbd>Leertaste</kbd> starten Sie den nächten Durchgang.\r\n</footer>",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": []
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "1",
+        "2",
+        "13",
+        "5",
+        "25",
+        "8",
+        "24",
+        "19",
+        "15"
+      ],
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "DE_Flanker Task_Sicherheitskopie_Sep2025",
+        "description": "This study implements a version of the Eriksen Flanker Task, though using arrows in place of letters. The target stimulus is surrounded by four distractor stimuli, and the array appears at different locations on the screen to increase difficulty.\n\nEriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon identification of a target letter in a non-search task. Perception and Psychophysics. 16: 143–149.",
+        "repository": "https://github.com/FelixHenninger/lab.js/tree/master/examples/Flanker Task",
+        "contributors": "Michael Kriechbaumer"
+      },
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "messageHandlers": []
+    }
+  },
+  "version": [
+    20,
+    2,
+    4
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3C!--%20If%20you're%20looking%20to%20fill%20all%20available%20browser%20space%2C%0A%20%20%20%20%20%20%20try%20replacing%20the%20class%20below%20with%20%22container%20fullscreen%22%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F%0D%0A.flanker-table%20%7B%0D%0A%20%20%20%20width%3A%20auto%3B%0D%0A%20%20%20%20border%3A%20none%3B%0D%0A%7D%0D%0A%0D%0A.flanker-table%20td%20%7B%0D%0A%20%20%20%20color%3A%20black%3B%0D%0A%20%20%20%20font-size%3A%204rem%3B%0D%0A%20%20%20%20font-weight%3A%20bold%3B%0D%0A%20%20%20%20text-align%3A%20center%3B%0D%0A%20%20%20%20width%3A%205rem%3B%0D%0A%7D%0D%0A",
+        "source": "library"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      },
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      }
+    }
+  }
+}
