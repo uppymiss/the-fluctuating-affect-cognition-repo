@@ -15,5 +15,8 @@
 - If unsure, open an issue before uploading data.
 
 ## Structure
-- `/experiments`: experiment code, protocols, materials.
-- `/data`: anonymized datasets and data README.
+- `json-codes-cognitive-tasks/` – JSON codes for cognitive tasks (SoSci integration)
+- `.github/` – PR template
+- `README.md`, `CONTRIBUTING.md`, `SECURITY.md`
+- (Later) `analysis/` for additional scripts
+- (Later) `data/` – only anonymized/aggregated data (no raw data or identifiers)
