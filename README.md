@@ -43,6 +43,26 @@ Two tasks are administered across 9 measurement points (MZP1_1 through MZP3_3):
 
 The first measurement point includes an extra practice block so participants can familiarize themselves with the task.
 
+### Timing Rationale
+
+**Flanker Task**
+
+- **Fixation / ITI (200 ms):** Directly supported by Weissman et al. (2022), who used a 200 ms blank screen between trials. Other studies used longer ITIs of 1000 ms (Xie et al., 2022).
+- **Stimulus timeout (850 ms):** Stricter than the 1500 ms cutoffs used by Weissman et al. (2022) and Xie et al. (2022), prioritizing fast, automatic responses over slow, deliberate ones.
+
+**Stroop Task**
+
+- **Total inter-trial pause (1150 ms = 500 ms fixation + 650 ms ITI):** Comparable to the 850--1100 ms variable ITIs reported by Aichert et al. (2012) and within the range of fixed ITIs of 1000 ms (Imbir et al., 2017) to 1500 ms used in other paradigms.
+- **Stimulus timeout (900 ms):** Comparable to the ~750 ms stimulus duration in Gyurkovics et al. (2022), providing slightly more response time while still enforcing a strict upper bound.
+
+**References**
+
+- Aichert, D. S. et al. (2012). *Neuropsychologia, 50*(14), 3570--3577. [doi:10.1016/j.neuropsychologia.2012.09.035](https://doi.org/10.1016/j.neuropsychologia.2012.09.035)
+- Gyurkovics, M. et al. (2022). *Brain Sciences, 12*(11), 1517. [doi:10.3390/brainsci12111517](https://doi.org/10.3390/brainsci12111517)
+- Imbir, K. K. et al. (2017). *Frontiers in Psychology, 8*, 1521. [doi:10.3389/fpsyg.2017.01521](https://doi.org/10.3389/fpsyg.2017.01521)
+- Weissman, D. H. et al. (2022). *Quarterly Journal of Experimental Psychology, 75*(8), 1554--1571. [doi:10.1177/17470218211057902](https://doi.org/10.1177/17470218211057902)
+- Xie, L. et al. (2022). *Frontiers in Psychology, 13*, 956328. [doi:10.3389/fpsyg.2022.956328](https://doi.org/10.3389/fpsyg.2022.956328)
+
 ### Data Transfer
 
 Trial-level data (block, trial number, congruency, accuracy, RT, stimulus, response) is transferred from the lab.js iframe to SoSci Survey via `window.parent.postMessage()`. See [docs/HOWTO_labjs_SoSci_Integration.md](docs/HOWTO_labjs_SoSci_Integration.md) for the full integration guide.
