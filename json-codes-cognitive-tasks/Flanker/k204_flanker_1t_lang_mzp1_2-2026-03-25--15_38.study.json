@@ -19,421 +19,8 @@
       "_tab": "Content",
       "scrollTop": true
     },
-    "3": {
-      "id": "3",
-      "type": "lab.flow.Sequence",
-      "children": [
-        "4",
-        "6",
-        "7"
-      ],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Trial",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true,
-      "_template": false,
-      "_collapsed": false
-    },
-    "4": {
-      "id": "4",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Empty Screen Trial",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "timeout": "150",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "6": {
-      "id": "6",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "left",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowLeft"
-        },
-        {
-          "label": "right",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowRight"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Trial",
-      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "correctResponse": "${ parameters.orientation }",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "7": {
-      "id": "7",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Feedback",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\" id=\"feedback\">\r\n  <span\r\n    style=\"color: ${ state.correct ? 'green' : 'red' }; font-size: 2.4rem\">\r\n    ⬤\r\n  </span>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "tardy": true,
-      "timeout": "500",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "9": {
-      "id": "9",
-      "type": "lab.flow.Sequence",
-      "children": [
-        "10",
-        "11"
-      ],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Task 1",
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "files": [],
-      "_tab": "Behavior",
-      "timeout": "850",
-      "scrollTop": false,
-      "_template": false
-    },
-    "10": {
-      "id": "10",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Empty Screen 1",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "timeout": "200",
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "files": [],
-      "_tab": "Behavior"
-    },
-    "11": {
-      "id": "11",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "left",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowLeft"
-        },
-        {
-          "label": "right",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowRight"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Durchgang 1",
-      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "correctResponse": "${ parameters.orientation }",
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "files": [],
-      "_tab": "Behavior"
-    },
-    "12": {
-      "messageHandlers": [
-        {
-          "title": "",
-          "message": "",
-          "code": ""
-        }
-      ],
-      "id": "12",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "title": "Vielen Dank!",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\">\n  <div>\n    <h1><strong>Super gemacht!</strong></h1>\n    <p style=\"font-size: 1.3rem\"><strong>Sie haben die zweite Testaufgabe abgeschlossen.</strong><br>\n  </p>\n  <p style=\"font-size: 1.2rem\">\n    Vielen Dank für Ihre Teilnahme.\n    </p>\n  </div>\n</main>\n<footer class=\"content-vertical-center content-horizontal-center\">\n  <p style=\"font-size: 1.2rem\">\n    Diese Testaufgabe wurde auf Basis einer Vorlage von <a href=\"http://felixhenninger.com\"> Felix Henninger</a> explizit für die MindCycle-Studie weiterentwickelt.\n  </p>\n</footer>",
-      "timeout": "08",
-      "parameters": [
-        {
-          "name": "",
-          "value": "",
-          "type": "string"
-        }
-      ],
-      "files": [
-        {
-          "localPath": "Gif_Weiter.gif",
-          "poolPath": "embedded/7069317238279563a0aa3c9e8e79c32d1e8375582500e21dda0b5a22bddd55c0.gif"
-        }
-      ],
-      "_tab": "Behavior",
-      "scrollTop": true
-    },
-    "14": {
-      "id": "14",
-      "type": "lab.flow.Sequence",
-      "children": [
-        "16",
-        "17"
-      ],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Task 2",
-      "parameters": [],
-      "files": [],
-      "_tab": "Behavior",
-      "timeout": "850",
-      "scrollTop": true,
-      "_template": false
-    },
-    "16": {
-      "id": "16",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Empty Screen 2",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "timeout": "200",
-      "parameters": [],
-      "files": [],
-      "_tab": "Behavior",
-      "scrollTop": true
-    },
-    "17": {
-      "id": "17",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "left",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowLeft"
-        },
-        {
-          "label": "right",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowRight"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Durchgang 2",
-      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "correctResponse": "${ parameters.orientation }",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "20": {
-      "id": "20",
-      "type": "lab.flow.Sequence",
-      "children": [
-        "21",
-        "22"
-      ],
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Task 3",
-      "parameters": [],
-      "files": [],
-      "_tab": "Behavior",
-      "timeout": "850",
-      "scrollTop": true,
-      "_template": false,
-      "_collapsed": false
-    },
-    "21": {
-      "id": "21",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "",
-          "event": "",
-          "target": "",
-          "filter": ""
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Empty Screen 3",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "timeout": "200",
-      "parameters": [],
-      "files": [],
-      "_tab": "Behavior",
-      "scrollTop": true
-    },
-    "22": {
-      "id": "22",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "left",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowLeft"
-        },
-        {
-          "label": "right",
-          "event": "keydown",
-          "target": "",
-          "filter": "ArrowRight"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Durchgang 3",
-      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
-      "correctResponse": "${ parameters.orientation }",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "24": {
-      "id": "24",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "Start",
-          "event": "keypress",
-          "target": "",
-          "filter": "Space"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Zwischenmeldung Durchgang 3",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n      <h1><strong>Fast geschafft!</strong></h1>\r\n    <p style=\"font-size: 1.3rem\">\r\n    <strong>Sie haben den zweiten Durchgang geschafft.</strong>\r\n  </p>\r\n  <p>\r\n    <p style=\"font-size: 1.2rem\">Sie können eine kurze Pause einlegen und den letzten Durchgang starten, sobald Sie bereit sind.<br>\r\n    Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genau wie möglich!</p>\r\n  </div>\r\n</main>\r\n<footer style=\"font-size: 1.2rem\">\r\n<strong>Gleich geht es weiter mit der letzten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\r\n</footer>",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "25": {
-      "id": "25",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "Start",
-          "event": "keypress",
-          "target": "",
-          "filter": "Space"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Zwischenmeldung Durchgang 2",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n      <h1><strong>Weiter so!</strong></h1>\r\n    <p style=\"font-size: 1.3rem\">\r\n    <strong>Sie haben den ersten Durchgang geschafft.</strong>\r\n  </p>\r\n  <p>\r\n    <p style=\"font-size: 1.2rem\">Sie können eine kurze Pause einlegen und den zweiten Durchgang starten, sobald Sie bereit sind.<br>\r\n    Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genau wie möglich!</p>\r\n  </div>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n<strong>Gleich geht es weiter mit der zweiten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\r\n  </p>\r\n</footer>",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "37": {
-      "id": "37",
-      "type": "lab.html.Screen",
-      "responses": [
-        {
-          "label": "Start",
-          "event": "keypress",
-          "target": "",
-          "filter": "Space"
-        }
-      ],
-      "messageHandlers": [],
-      "title": "Zwischenmeldung Durchgang 1",
-      "content": "<main class=\"content-vertical-center content-horizontal-center\">\r\n  <div>\r\n     <h1><strong>Sehr gut!</strong></h1>\r\n    <p style=\"font-size: 1.3rem\">\r\n    <strong>Vielen Dank, dass Sie sich die Zeit für den Übungsdurchgang genommen haben.</strong>\r\n  </p>\r\n  <p>\r\n    <p style=\"font-size: 1.2rem\">Nun sind Sie erneut mit der Aufgabe vertraut, Sie können eine kurze Pause einlegen und den Test starten, sobald Sie bereit sind.<br>\r\n    Die Aufgabe ist dieselbe wie zuvor, jedoch ohne Rückmeldung. Sie haben für jedes Item weniger als eine Sekunde Zeit, antworten Sie daher so schnell und genau wie möglich.<br><br>\r\n      Sie absolvieren <strong>drei</strong> Durchgänge, zwischen denen Sie eine kurze Pause machen können.</p>\r\n  </div>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n<strong>Gleich geht es weiter mit der ersten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\r\n  </p>\r\n</footer>",
-      "parameters": [],
-      "files": [],
-      "_tab": "Content",
-      "scrollTop": true
-    },
-    "143": {
-      "id": "143",
+    "2": {
+      "id": "2",
       "type": "lab.flow.Loop",
       "children": [
         "3"
@@ -557,18 +144,63 @@
         }
       ],
       "messageHandlers": [],
-      "title": "Probedurchlauf mit Feedback 1",
+      "title": "Practice_Block",
       "parameters": [],
       "files": [],
       "sample": {
         "mode": "draw-shuffle"
       },
-      "_collapsed": true,
+      "_collapsed": false,
       "_tab": "Content",
       "scrollTop": true
     },
-    "153": {
-      "id": "153",
+    "3": {
+      "id": "3",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "4",
+        "6",
+        "7"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Practice_Trial ",
+      "parameters": [],
+      "files": [],
+      "_tab": "Scripts",
+      "scrollTop": true,
+      "_template": false,
+      "_collapsed": false
+    },
+    "4": {
+      "id": "4",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Practice_Fixation",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
+      "timeout": "150",
+      "parameters": [],
+      "files": [],
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "5": {
+      "id": "5",
       "type": "lab.flow.Loop",
       "children": [
         "9"
@@ -748,7 +380,7 @@
         }
       ],
       "messageHandlers": [],
-      "title": "Task ohne Feedback 1",
+      "title": "Test_Block",
       "parameters": [],
       "files": [],
       "sample": {
@@ -758,202 +390,413 @@
       "_tab": "Content",
       "scrollTop": true
     },
-    "157": {
-      "id": "157",
-      "type": "lab.flow.Loop",
-      "children": [
-        "14"
-      ],
-      "templateParameters": {
-        "columns": [
-          {
-            "name": "orientation",
-            "type": "string"
-          },
-          {
-            "name": "congruency",
-            "type": "string"
-          },
-          {
-            "name": "target",
-            "type": "string"
-          },
-          {
-            "name": "flanker",
-            "type": "string"
-          },
-          {
-            "name": "position",
-            "type": "string"
-          }
-        ],
-        "rows": [
-          [
-            "left",
-            "congruent",
-            "&larr;",
-            "&larr;",
-            "left"
-          ],
-          [
-            "left",
-            "congruent",
-            "&larr;",
-            "&larr;",
-            "right"
-          ],
-          [
-            "left",
-            "congruent",
-            "&larr;",
-            "&larr;",
-            "center"
-          ],
-          [
-            "left",
-            "incongruent",
-            "&larr;",
-            "&rarr;",
-            "left"
-          ],
-          [
-            "left",
-            "incongruent",
-            "&larr;",
-            "&rarr;",
-            "right"
-          ],
-          [
-            "left",
-            "incongruent",
-            "&larr;",
-            "&rarr;",
-            "center"
-          ],
-          [
-            "right",
-            "congruent",
-            "&rarr;",
-            "&rarr;",
-            "left"
-          ],
-          [
-            "right",
-            "congruent",
-            "&rarr;",
-            "&rarr;",
-            "right"
-          ],
-          [
-            "right",
-            "congruent",
-            "&rarr;",
-            "&rarr;",
-            "center"
-          ],
-          [
-            "right",
-            "incongruent",
-            "&rarr;",
-            "&larr;",
-            "left"
-          ],
-          [
-            "right",
-            "incongruent",
-            "&rarr;",
-            "&larr;",
-            "right"
-          ],
-          [
-            "right",
-            "incongruent",
-            "&rarr;",
-            "&larr;",
-            "center"
-          ],
-          [
-            "left",
-            "congruent",
-            "&larr;",
-            "&larr;",
-            "right"
-          ],
-          [
-            "left",
-            "incongruent",
-            "&larr;",
-            "&rarr;",
-            "left"
-          ],
-          [
-            "right",
-            "congruent",
-            "&rarr;",
-            "&rarr;",
-            "right"
-          ],
-          [
-            "right",
-            "incongruent ",
-            "&rarr;",
-            "&larr;",
-            "center"
-          ],
-          [
-            "left",
-            "congruent",
-            "&larr;",
-            "&larr;",
-            "center"
-          ],
-          [
-            "right",
-            "congruent",
-            "&rarr;",
-            "&rarr;",
-            "left"
-          ],
-          [
-            "left",
-            "incongruent",
-            "&larr;",
-            "&rarr;",
-            "right"
-          ],
-          [
-            "right",
-            "incongruent",
-            "&rarr;",
-            "&larr;",
-            "left"
-          ]
-        ]
-      },
+    "6": {
+      "id": "6",
+      "type": "lab.html.Screen",
       "responses": [
         {
-          "label": "",
-          "event": "",
+          "label": "left",
+          "event": "keydown",
           "target": "",
-          "filter": ""
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
         }
       ],
       "messageHandlers": [],
-      "title": "Task ohne Feedback 2",
+      "title": "Practice_Stimulus",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
       "parameters": [],
       "files": [],
-      "sample": {
-        "mode": "draw-shuffle"
-      },
-      "_collapsed": false,
-      "_tab": "More",
+      "_tab": "Scripts",
       "scrollTop": true
     },
-    "161": {
-      "id": "161",
+    "7": {
+      "id": "7",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Practice_Feedback",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\" id=\"feedback\">\r\n  <span\r\n    style=\"color: ${ state.correct ? 'green' : 'red' }; font-size: 2.4rem\">\r\n    ⬤\r\n  </span>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
+      "tardy": true,
+      "timeout": "500",
+      "parameters": [],
+      "files": [],
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "9": {
+      "id": "9",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "10",
+        "11"
+      ],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Test_Trial",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior",
+      "timeout": "",
+      "scrollTop": false,
+      "_template": false
+    },
+    "10": {
+      "id": "10",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Test_Fixation",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\"> \r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
+      "timeout": "200",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior"
+    },
+    "11": {
+      "id": "11",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "left",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowLeft"
+        },
+        {
+          "label": "right",
+          "event": "keydown",
+          "target": "",
+          "filter": "ArrowRight"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Test_Stimulus",
+      "content": "<main class=\"content-vertical-center content-horizontal-${ parameters.position }\">\r\n  <table class=\"table-plain flanker-table\">\r\n    <tr>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.target } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n      <td> ${ parameters.flanker } </td>\r\n    </tr>\r\n  </table>\r\n</main>\r\n<footer class=\"content-vertical-center content-horizontal-center\">\r\n  <p style=\"font-size: 1.2rem\">\r\n  In welche Richtung zeigt der <strong>mittlere Pfeil?</strong><br> Bitte antworten Sie mit den Pfeiltasten, <kbd style=\"font-size: 1.5rem\">&larr;</kbd> für &larr; und <kbd style=\"font-size: 1.5rem\">&rarr;</kbd> für &rarr;\r\n  </p>\r\n</footer>",
+      "correctResponse": "${ parameters.orientation }",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [],
+      "_tab": "Behavior",
+      "timeout": "800"
+    },
+    "23": {
+      "messageHandlers": [
+        {
+          "title": "Daten an SoSci senden",
+          "message": "run",
+          "code": "// === Flanker-Daten strukturiert an SoSci Survey senden ===\nvar ds = this.options.datastore;\nvar allData = ds.data;\n\n// Nur Stimulus-Screens filtern\n// Practice: sender='Practice_Stimulus', Test: sender beginnt mit 'Test_Stimulus'\nvar trials = allData.filter(function(row) {\n  return row.sender === 'Practice_Stimulus' || (row.sender && row.sender.indexOf('Test_Stimulus') === 0);\n});\n\n// Daten pro Spalte sammeln\nvar blocks = [];\nvar trialNrs = [];\nvar trialarten = [];\nvar accs = [];\nvar rts = [];\nvar stimuli = [];\nvar reaktionen = [];\n\ntrials.forEach(function(trial, i) {\n  var block = (trial.sender === 'Practice_Stimulus') ? 'practice' : 'test';\n  blocks.push(block);\n  trialNrs.push(i + 1);\n  trialarten.push(trial.congruency || '');\n  accs.push(trial.correct === true ? 1 : 0);\n  rts.push(Math.round(trial.duration || 0));\n  stimuli.push(trial.orientation || '');\n  reaktionen.push(trial.response || '');\n});\n\n// Strukturierte Daten per postMessage an SoSci-Seite senden\nvar msg = {\n  type: 'labjs-data',\n  task: 'flanker',\n  K205_01: blocks.join(','),\n  K205_02: trialNrs.join(','),\n  K205_03: trialarten.join(','),\n  K205_04: accs.join(','),\n  K205_05: rts.join(','),\n  K205_06: stimuli.join(','),\n  K205_07: reaktionen.join(',')\n};\n\ntry {\n  window.parent.postMessage(msg, '*');\n  console.log('Flanker: ' + trials.length + ' Trials per postMessage gesendet.');\n} catch(e) {\n  console.warn('Flanker postMessage fehlgeschlagen:', e);\n}"
+        }
+      ],
+      "id": "23",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "title": "End",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\">\n  <div>\n    <h1><strong>Super gemacht!</strong></h1>\n    <p style=\"font-size: 1.3rem\"><strong>Sie haben die zweite Testaufgabe abgeschlossen.</strong><br>\n  </p>\n  <p style=\"font-size: 1.2rem\">\n    Vielen Dank für Ihre Teilnahme.\n    </p>\n  </div>\n</main>\n<footer class=\"content-vertical-center content-horizontal-center\">\n  <p style=\"font-size: 1.2rem\">\n    Diese Testaufgabe wurde auf Basis einer Vorlage von <a href=\"http://felixhenninger.com\"> Felix Henninger</a> explizit für die MindCycle-Studie weiterentwickelt.\n  </p>\n</footer>",
+      "timeout": "08",
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "files": [
+        {
+          "localPath": "Gif_Weiter.gif",
+          "poolPath": "embedded/7069317238279563a0aa3c9e8e79c32d1e8375582500e21dda0b5a22bddd55c0.gif"
+        }
+      ],
+      "_tab": "Behavior",
+      "scrollTop": true
+    },
+    "37": {
+      "id": "37",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Transition",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\">\n  <div>\n     <h1><strong>Sehr gut!</strong></h1>\n    <p style=\"font-size: 1.3rem\">\n    <strong>Vielen Dank, dass Sie sich die Zeit für den Übungsdurchgang genommen haben.</strong>\n  </p>\n  <p>\n    <p style=\"font-size: 1.2rem\">Nun sind Sie mit der Aufgabe vertraut, Sie können erneut eine kurze Pause einlegen und den Test starten, sobald Sie bereit sind.<br>\n    Die Aufgabe ist dieselbe wie zuvor, jedoch ohne Rückmeldung. Sie haben für jedes Item weniger als eine Sekunde Zeit, antworten Sie daher so schnell und genau wie möglich.<br><br>\n      Sie absolvieren <strong>drei</strong> Durchgänge, zwischen denen Sie eine kurze Pause machen können.</p>\n  </div>\n</main>\n<footer class=\"content-vertical-center content-horizontal-center\">\n  <p style=\"font-size: 1.2rem\">\n<strong>Gleich geht es weiter mit der ersten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\n</p>\n</footer>",
+      "parameters": [],
+      "files": [],
+      "_tab": "Behavior",
+      "scrollTop": true
+    },
+    "100": {
+      "id": "100",
       "type": "lab.flow.Loop",
       "children": [
-        "20"
+        "9"
+      ],
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "orientation",
+            "type": "string"
+          },
+          {
+            "name": "congruency",
+            "type": "string"
+          },
+          {
+            "name": "target",
+            "type": "string"
+          },
+          {
+            "name": "flanker",
+            "type": "string"
+          },
+          {
+            "name": "position",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "center"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "right"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent ",
+            "&rarr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "left",
+            "congruent",
+            "&larr;",
+            "&larr;",
+            "center"
+          ],
+          [
+            "right",
+            "congruent",
+            "&rarr;",
+            "&rarr;",
+            "left"
+          ],
+          [
+            "left",
+            "incongruent",
+            "&larr;",
+            "&rarr;",
+            "right"
+          ],
+          [
+            "right",
+            "incongruent",
+            "&rarr;",
+            "&larr;",
+            "left"
+          ]
+        ]
+      },
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "messageHandlers": [],
+      "title": "Test_Block_2",
+      "parameters": [],
+      "files": [],
+      "sample": {
+        "n": "",
+        "replace": false,
+        "mode": "draw-shuffle"
+      },
+      "_collapsed": false,
+      "_tab": "Stimuli",
+      "scrollTop": true
+    },
+    "101": {
+      "messageHandlers": [],
+      "id": "101",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "title": "Transition",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\">\n  <div>\n      <h1><strong>Weiter so!</strong></h1>\n    <p style=\"font-size: 1.3rem\">\n    <strong>Sie haben den ersten Durchgang geschafft.</strong>\n  </p>\n  <p>\n    <p style=\"font-size: 1.2rem\">Sie können eine kurze Pause einlegen und den zweiten Durchgang starten, sobald Sie bereit sind.<br>\n    Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genau wie möglich!</p>\n  </div>\n</main>\n<footer class=\"content-vertical-center content-horizontal-center\">\n  <p style=\"font-size: 1.2rem\">\n<strong>Gleich geht es weiter mit der zweiten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\n  </p>\n</footer>",
+      "parameters": [],
+      "files": [],
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "102": {
+      "id": "102",
+      "type": "lab.flow.Loop",
+      "children": [
+        "9"
       ],
       "templateParameters": {
         "columns": [
@@ -1130,13 +973,34 @@
         }
       ],
       "messageHandlers": [],
-      "title": "Task ohne Feedback 3",
+      "title": "Test_Block_3",
       "parameters": [],
       "files": [],
       "sample": {
+        "n": "",
+        "replace": false,
         "mode": "draw-shuffle"
       },
       "_collapsed": false,
+      "_tab": "Stimuli",
+      "scrollTop": true
+    },
+    "103": {
+      "messageHandlers": [],
+      "id": "103",
+      "type": "lab.html.Screen",
+      "responses": [
+        {
+          "label": "Start",
+          "event": "keypress",
+          "target": "",
+          "filter": "Space"
+        }
+      ],
+      "title": "Transition",
+      "content": "<main class=\"content-vertical-center content-horizontal-center\">\n  <div>\n      <h1><strong>Fast geschafft!</strong></h1>\n    <p style=\"font-size: 1.3rem\">\n    <strong>Sie haben den zweiten Durchgang geschafft.</strong>\n  </p>\n  <p>\n    <p style=\"font-size: 1.2rem\">Sie können eine kurze Pause einlegen und den letzten Durchgang starten, sobald Sie bereit sind.<br>\n    Die Aufgabe ist dieselbe wie zuvor. Bitte antworten Sie weiter so schnell und genau wie möglich!</p>\n  </div>\n</main>\n<footer style=\"font-size: 1.2rem\">\n<strong>Gleich geht es weiter mit der letzten Runde!</strong><br> Bitte drücken Sie die <kbd style=\"font-size: 1.1rem\">Leertaste</kbd>, wenn Sie bereit sind.\n</footer>",
+      "parameters": [],
+      "files": [],
       "_tab": "Content",
       "scrollTop": true
     },
@@ -1146,14 +1010,14 @@
       "type": "lab.flow.Sequence",
       "children": [
         "1",
-        "143",
+        "2",
         "37",
-        "153",
-        "25",
-        "157",
-        "24",
-        "161",
-        "12"
+        "5",
+        "101",
+        "100",
+        "103",
+        "102",
+        "23"
       ],
       "plugins": [
         {
@@ -1161,10 +1025,10 @@
         }
       ],
       "metadata": {
-        "title": "Flanker_Task_1 Trials_AS_Feb26",
+        "title": "K204_flanker_1T_lang_MZP1_2",
         "description": "This study implements a modelled version of the Eriksen Flanker Task, though using arrows in place of letters. The target stimulus is surrounded by four distractor stimuli, and the array appears at different locations on the screen to increase difficulty.\n\nEriksen, B. A., & Eriksen, C. W. (1974). Effects of noise letters upon identification of a target letter in a non-search task. Perception and Psychophysics. 16: 143–149.",
         "repository": "https://github.com/uppymiss/the-fluctuating-affect-cognition-repo",
-        "contributors": "Arleny Stegmaier\n\nFalls Sie dazu noch Fragen haben, setzen Sie sich gerne mit uns in Verbindung:\nProjektleitung: Arleny Stegmaier, MindCycle-Studie@uni-mainz.de"
+        "contributors": "Arleny Stegmaier, MindCycle-Studie@uni-mainz.de"
       },
       "parameters": [
         {
